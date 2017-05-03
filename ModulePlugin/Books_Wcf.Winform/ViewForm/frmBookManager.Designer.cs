@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnClose = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -45,24 +43,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.doubleInput1 = new DevComponents.Editors.DoubleInput();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.gridBoxCard1 = new EfwControls.CustomControl.GridBoxCard();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBoxCard1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(670, 418);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "退出";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button2
             // 
@@ -162,7 +144,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(579, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 439);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -208,78 +190,12 @@
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column5.TrueValue = "1";
             // 
-            // doubleInput1
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput1.DisplayFormat = "0.000";
-            this.doubleInput1.Increment = 1D;
-            this.doubleInput1.Location = new System.Drawing.Point(15, 251);
-            this.doubleInput1.Name = "doubleInput1";
-            this.doubleInput1.ShowUpDown = true;
-            this.doubleInput1.Size = new System.Drawing.Size(80, 21);
-            this.doubleInput1.TabIndex = 23;
-            this.doubleInput1.Value = 1D;
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(193, 372);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 24;
-            this.buttonX1.Text = "buttonX1";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
-            // gridBoxCard1
-            // 
-            this.gridBoxCard1.AllowSortWhenClickColumnHeader = false;
-            this.gridBoxCard1.AllowUserToResizeRows = false;
-            this.gridBoxCard1.BackgroundColor = System.Drawing.Color.White;
-            this.gridBoxCard1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gridBoxCard1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridBoxCard1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridBoxCard1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridBoxCard1.HideSelectionCardWhenCustomInput = false;
-            this.gridBoxCard1.HighlightSelectedColumnHeaders = false;
-            this.gridBoxCard1.IsInputNumSelectedCard = false;
-            this.gridBoxCard1.IsShowLetter = false;
-            this.gridBoxCard1.IsShowPage = false;
-            this.gridBoxCard1.Location = new System.Drawing.Point(193, 201);
-            this.gridBoxCard1.Name = "gridBoxCard1";
-            this.gridBoxCard1.RowHeadersWidth = 30;
-            this.gridBoxCard1.RowTemplate.Height = 23;
-            this.gridBoxCard1.SelectAllSignVisible = false;
-            this.gridBoxCard1.SelectionCards = null;
-            this.gridBoxCard1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridBoxCard1.SelectionNumKeyBoards = null;
-            this.gridBoxCard1.SeqVisible = true;
-            this.gridBoxCard1.SetCustomStyle = false;
-            this.gridBoxCard1.Size = new System.Drawing.Size(240, 150);
-            this.gridBoxCard1.TabIndex = 25;
-            // 
             // frmBookManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 462);
-            this.Controls.Add(this.gridBoxCard1);
-            this.Controls.Add(this.buttonX1);
-            this.Controls.Add(this.doubleInput1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
@@ -290,22 +206,17 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnClose);
             this.Name = "frmBookManager";
             this.Text = "";
             this.OpenWindowBefore += new System.EventHandler(this.frmBookManager_OpenWindowBefore);
             this.Load += new System.EventHandler(this.frmBookManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBoxCard1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         # endregion
-
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -321,8 +232,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private DevComponents.Editors.DoubleInput doubleInput1;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private EfwControls.CustomControl.GridBoxCard gridBoxCard1;
     }
 }
