@@ -215,9 +215,9 @@ ModelManifest.xml
 Output/MongoDB/
 Output/ServerLog/
 Output/FileStore/
-Output/CodeTemplate/
-Output/ModulePlugin/
+#Output/CodeTemplate/
+#Output/ModulePlugin/
 Output/Http/setup_*.exe
 Docs/
-Output_Client/
+#Output_Client/
 *.png
