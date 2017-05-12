@@ -21,7 +21,7 @@ namespace EFWCoreLib.WinformFrame
         private ToolStripMenuItem 消息面板ToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem 退出ToolStripMenuItem;
-        private PictureBox pictureBox1;
+        private PictureBox loading;
         private LinkLabel btnConfig;
         private LinkLabel btnclose;
         private IContainer components;
@@ -69,7 +69,6 @@ namespace EFWCoreLib.WinformFrame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSplash));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -78,11 +77,11 @@ namespace EFWCoreLib.WinformFrame
             this.消息面板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loading = new System.Windows.Forms.PictureBox();
             this.btnConfig = new System.Windows.Forms.LinkLabel();
             this.btnclose = new System.Windows.Forms.LinkLabel();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loading)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -139,16 +138,15 @@ namespace EFWCoreLib.WinformFrame
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // loading
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(620, 350);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.loading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loading.Location = new System.Drawing.Point(0, 0);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(620, 350);
+            this.loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.loading.TabIndex = 1;
+            this.loading.TabStop = false;
             // 
             // btnConfig
             // 
@@ -189,7 +187,7 @@ namespace EFWCoreLib.WinformFrame
             this.ControlBox = false;
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnConfig);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.loading);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSplash";
@@ -200,7 +198,7 @@ namespace EFWCoreLib.WinformFrame
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSplash_FormClosing);
             this.Load += new System.EventHandler(this.FrmSplash_Load);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loading)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +215,8 @@ namespace EFWCoreLib.WinformFrame
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Icon = Properties.Resources.msn;
             this.notifyIcon1.Text = "客户端程序";
+
+            loading.ImageLocation = CoreFrame.Init.AppGlobal.AppRootPath + @"images\\loading.jpg";
         }
 
         private void FrmSplash_FormClosing(object sender, FormClosingEventArgs e)

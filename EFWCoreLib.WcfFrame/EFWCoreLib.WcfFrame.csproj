@@ -169,9 +169,8 @@
   <PropertyGroup>
     <PostBuildEvent>Copy "$(TargetPath)" "$(SolutionDir)Output"
 Copy "$(TargetPath)" "$(SolutionDir)Output_Client"
-Copy "$(TargetPath)" "D:\SinoCloudHIS\cloudhospital\Component"
-Copy "$(TargetPath)" "D:\SinoCloudHIS\cloudhospital\Output"
-Copy "$(TargetPath)" "D:\SinoCloudHIS\cloudhospital\Output_Client"
+Copy "$(TargetDir)\$(TargetFileName)" "$(SolutionDir)..\cloudhospital\Output"
+Copy "$(TargetDir)\$(TargetFileName)" "$(SolutionDir)..\cloudhospital\Output_Client"
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
